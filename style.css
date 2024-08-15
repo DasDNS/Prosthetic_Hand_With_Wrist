@@ -1,0 +1,33 @@
+html {font-family: Arial, Helvetica, sans-serif; display: inline-block; text-align: center; }
+h1 { font-size: 1.8rem; color: #FFF; }
+p { font-size: 1.4rem;}
+.topnav {overflow: hidden;background-color: #012;}
+body {margin: 0;}
+.content {padding: 30px;}
+.card-grid {max-width: 700px;margin: 0 auto;display: grid;grid-gap: 2rem;grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));}
+.card {background-color: #FFF;box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5);}
+.card-title {font-size: 1.2rem;font-weight: bold;color: #047;}
+.state {font-size: 1.2rem;color:#12A;}
+.slider {-webkit-appearance: none;margin: 0 auto;width: 100%;height: 15px;border-radius: 10px;background: #FFD65C;outline: none;}
+.slider::-webkit-slider-thumb {-webkit-appearance: none;appearance: none;width: 30px;height: 30px;border-radius: 50%;background: #047;cursor: pointer;}
+.slider::-moz-range-thumb {width: 30px;height: 30px;border-radius: 50% ;background: #047;cursor: pointer;}
+.switch {padding-left: 5%;padding-right: 5%;}
+.directional-buttons {padding-left: 10%;padding-right: 10%;width: 16rem;height: 16rem;display: grid;grid-gap: 0.5rem;grid-template-columns: 45fr 60fr 45fr;grid-template-rows: 45fr 60fr 45fr;grid-template-areas: "....  up  .....""left  ..  right" ".... down .....";}
+.visually-hidden {position: absolute !important;height: 1px; width: 1px;overflow: hidden;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);white-space: nowrap;}
+.direction-button {color: #047;background: currentcolor;border: none;position: relative;}
+.direction-button:before {display: block;content: "";position: absolute;width: 4.25rem;height: 4.25rem;transform: rotate(45deg);background: currentcolor;}
+.direction-button:after {display: block;content: "";position: absolute;border: 2rem solid transparent;color: #FD6;}
+.direction-button:hover {color: #FD6;}
+.direction-button:active:after {color: #555;}
+.up {grid-area: up;border-radius: 0.5rem 0.5rem 0 0;}
+.up:before {left: calc(50% - 2.125rem);bottom: -2.125rem;}
+.up:after {border-bottom-color: currentcolor;left: calc(50% - 2rem);top: -1rem;}
+.left {grid-area: left;border-radius: 0.5rem 0 0 0.5rem;}
+.left:before {right: -2.125rem;top: calc(50% - 2.125rem);}
+.left:after {border-right-color: currentcolor;top: calc(50% - 2rem);left: -1rem;}
+.right {grid-area: right;border-radius: 0 0.5rem 0.5rem 0;}
+.right:before {left: -2.125rem;top: calc(50% - 2.125rem);}
+.right:after {border-left-color: currentcolor;top: calc(50% - 2rem);right: -1rem;}
+.down {grid-area: down;border-radius: 0 0 0.5rem 0.5rem;}
+.down:before {left: calc(50% - 2.125rem);top: -2.125rem;}
+.down:after {border-top-color: currentcolor;left: calc(50% - 2rem);bottom: -1rem;}
