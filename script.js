@@ -17,10 +17,6 @@ function initWebSocket() {
 function onOpen(event) {
     console.log('Connection opened');
     getValues();
-    initButtonUp();
-    initButtonLeft();
-    initButtonRight();
-    initButtonDown();
 }
 function onClose(event) {
     console.log('Connection closed');
@@ -37,36 +33,20 @@ function onMessage(event) {
     console.log(event.data);
     var myObj = JSON.parse(event.data);
     var keys = Object.keys(myObj);
-
     for (var i = 0; i < keys.length; i++){
         var key = keys[i];
         document.getElementById(key).innerHTML = myObj[key];
         document.getElementById("slider"+ (i+1).toString()).value = myObj[key];
     }
 }
-function initButtonUp() {
-    document.getElementById('upButton').addEventListener('click', toggleUp);
-}
-function initButtonUp() {
-    document.getElementById('upButton').addEventListener('click', toggleUp);
-}
 function toggleUp(){
     websocket.send('toggleUp');
-}
-function initButtonLeft() {
-    document.getElementById('leftButton').addEventListener('click', toggleLeft);
 }
 function toggleLeft(){
     websocket.send('toggleLeft');
 }
-function initButtonRight() {
-    document.getElementById('rightButton').addEventListener('click', toggleRight);
-}
 function toggleRight(){
     websocket.send('toggleRight');
-}
-function initButtonDown() {
-    document.getElementById('downButton').addEventListener('click', toggleDown);
 }
 function toggleDown(){
     websocket.send('toggleDown');
